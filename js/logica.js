@@ -195,21 +195,49 @@
 // window.alert("El número mayor fue el "+nroMayor+" y fue ingresado en la posición "+posNumeroMayor);
 
 
-window.alert("Comienza ejercicio 9, estás listo?");
-let numero;
+// window.alert("Comienza ejercicio 9, estás listo?");
+// let numero;
+// let validaNumero;
+// let factorial=0;
+// numero=prompt("ingresa un número entero para calcular su factorial: ");
+// validaNumero=isNaN(numero);
+// while(validaNumero==true || !(parseInt(numero)==parseFloat(numero))){
+//     window.alert("El ingreso incorrecto");
+//     numero=prompt("ingresa un número entero para calcular su factorial: ");
+//     validaNumero=isNaN(numero);
+// }
+// factorial=1;
+// for(let x=2;x<=numero;x++){
+//     factorial*=x;
+// }
+// console.log(numero);
+// console.log(factorial);
+// window.alert(numero+"! = "+factorial);
+
+
+// window.alert("Comienza ejercicio 10, estás listo?");
+// let validaNumero;
+// let numero;
+// numero=prompt("Ingresa la nota: ");
+// validaNumero=isNaN(numero);
+// while(validaNumero==true || !(numero>=0 && numero<=10)){
+//     window.alert("El ingreso incorrecto");
+//     numero=prompt("Ingresa la nota: ");
+//     validaNumero=isNaN(numero);
+// }
+// numero=parseFloat(numero);
+// window.alert("La nota ingresada es "+numero);
+
+
+window.alert("Comienza ejercicio 11, estás listo?");
 let validaNumero;
-let factorial=0;
-numero=prompt("ingresa un número entero para calcular su factorial: ");
+let numero;
+numero=prompt("Ingresa la nota: ");
 validaNumero=isNaN(numero);
-while(validaNumero==true || !(parseInt(numero)==parseFloat(numero))){
+while(validaNumero==true || !(numero>=0 && numero<=10) || parseInt(numero)==0 || parseInt(numero)==2 || parseInt(numero)==3){
     window.alert("El ingreso incorrecto");
-    numero=prompt("ingresa un número entero para calcular su factorial: ");
+    numero=prompt("Ingresa la nota: ");
     validaNumero=isNaN(numero);
 }
-factorial=1;
-for(let x=2;x<=numero;x++){
-    factorial*=x;
-}
-console.log(numero);
-console.log(factorial);
-window.alert(numero+"! = "+factorial);
+numero=parseFloat(numero);
+window.alert("La nota ingresada es "+numero);
