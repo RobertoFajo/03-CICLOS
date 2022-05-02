@@ -229,15 +229,130 @@
 // window.alert("La nota ingresada es "+numero);
 
 
-window.alert("Comienza ejercicio 11, estás listo?");
-let validaNumero;
+// window.alert("Comienza ejercicio 12, estás listo?");
+// let continuar;
+// window.alert("************* INICIA VALIDACION CON WHILE ****************");
+// continuar=prompt("Desea continuar? [S/N]");
+// while(continuar!="S" && continuar!="N" && continuar!="s" && continuar!="n"){
+//     window.alert("Ingreso incorrecto, intente nuevamente.");
+//     continuar=prompt("Desea continuar? [S/N]");
+// }
+// window.alert("************* INICIA VALIDACION CON DO WHILE ****************");
+// do{
+//     continuar=prompt("Desea continuar? [S/N]");
+//     if(continuar!="S" && continuar!="N" && continuar!="s" && continuar!="n"){
+//         window.alert("Ingreso incorrecto, intente nuevamente.");
+//     }
+// }while(continuar!="S" && continuar!="N" && continuar!="s" && continuar!="n");
+// window.alert("************* FIN DE EJERCICIO ****************");
+
+
+// window.alert("Comienza ejercicio 13, estás listo?");
+// let numero;
+// let nroMayor;
+// let nroMenor; 
+// numero=prompt("Ingresa un número: ");
+// validaNumero=isNaN(numero);
+// while(validaNumero==true){
+//     window.alert("El ingreso incorrecto");
+//     numero=prompt("Ingresa un número: ");
+// validaNumero=isNaN(numero);
+// }
+// numero=parseFloat(numero);
+// nroMayor=numero;
+// nroMenor=numero;
+// while(numero!=0){
+//     if(numero<nroMenor){
+//         nroMenor=numero;
+//     }else{
+//         if(numero>nroMayor){
+//             nroMayor=numero;
+//         }
+//     }
+//     numero=prompt("Ingresa un número: ");
+//     validaNumero=isNaN(numero);
+//     while(validaNumero==true){
+//         window.alert("El ingreso incorrecto");
+//         numero=prompt("Ingresa un número: ");
+//     validaNumero=isNaN(numero);
+//     }
+//     numero=parseFloat(numero);
+    
+// }
+// window.alert("El mayor es "+nroMayor+" y el menor "+nroMenor);
+
+
+// window.alert("Comienza ejercicio 14, estás listo?");
+// let nombre;
+// let edad;
+// let contador=1;
+// let nombreMasJoven;
+// let edadMasJoven;
+// nombre=prompt("Ingresa nombre de la persona "+contador+":")
+// if(nombre!="*"){
+//     edad=prompt("ingresa la edad de la persona "+contador+":");
+//     validaNumero=isNaN(edad);
+//     while(validaNumero==true || !(parseInt(edad)==parseFloat(edad))){
+//         window.alert("El ingreso incorrecto");
+//         edad=prompt("ingresa la edad de la persona "+contador+":");
+//         validaNumero=isNaN(edad);
+//     }
+//     nombreMasJoven=nombre;
+//     edadMasJoven=edad;
+// }
+// while(nombre!="*"){
+//     contador++;
+//     nombre=prompt("Ingresa nombre de la persona "+contador+":")
+//     if(nombre!="*"){
+//         edad=prompt("ingresa la edad de la persona "+contador+":");
+//         validaNumero=isNaN(edad);
+//         while(validaNumero==true || !(parseInt(edad)==parseFloat(edad))){
+//             window.alert("El ingreso incorrecto");
+//             edad=prompt("ingresa la edad de la persona "+contador+":");
+//             validaNumero=isNaN(edad);
+//         }
+//         if(edad<edadMasJoven){
+//             edadMasJoven=edad;
+//             nombreMasJoven=nombre;
+//         }  
+//     }   
+// }
+// if(contador==1){
+//     window.alert("No hubo ingresos");
+// }else{
+//     window.alert("La persona mas joven es "+nombreMasJoven+" con "+edadMasJoven+" años");
+// }
+
+
+window.alert("Comienza ejercicio 15, estás listo?");
 let numero;
-numero=prompt("Ingresa la nota: ");
+let promedio;
+let contador=0;
+let sumaNumeros;
+numero=prompt("Ingresa un número: ");
 validaNumero=isNaN(numero);
-while(validaNumero==true || !(numero>=0 && numero<=10) || parseInt(numero)==0 || parseInt(numero)==2 || parseInt(numero)==3){
+while(validaNumero==true){
     window.alert("El ingreso incorrecto");
-    numero=prompt("Ingresa la nota: ");
-    validaNumero=isNaN(numero);
+    numero=prompt("Ingresa un número: ");
+validaNumero=isNaN(numero);
 }
 numero=parseFloat(numero);
-window.alert("La nota ingresada es "+numero);
+promedio=numero;
+sumaNumeros=numero;
+contador++;
+while(promedio<20){
+    numero=prompt("Ingresa un número: ");
+    validaNumero=isNaN(numero);
+    while(validaNumero==true){
+        window.alert("El ingreso incorrecto");
+        numero=prompt("Ingresa un número: ");
+        validaNumero=isNaN(numero);
+    }
+    numero=parseFloat(numero);
+    contador++;
+    sumaNumeros+=numero;
+    promedio=sumaNumeros/contador;
+}
+window.alert("Se ingresaron "+contador+" números");
+
+
