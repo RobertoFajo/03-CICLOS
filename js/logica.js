@@ -324,35 +324,101 @@
 // }
 
 
-window.alert("Comienza ejercicio 15, estás listo?");
-let numero;
-let promedio;
-let contador=0;
-let sumaNumeros;
-numero=prompt("Ingresa un número: ");
-validaNumero=isNaN(numero);
-while(validaNumero==true){
-    window.alert("El ingreso incorrecto");
-    numero=prompt("Ingresa un número: ");
-validaNumero=isNaN(numero);
-}
-numero=parseFloat(numero);
-promedio=numero;
-sumaNumeros=numero;
-contador++;
-while(promedio<20){
-    numero=prompt("Ingresa un número: ");
-    validaNumero=isNaN(numero);
+// window.alert("Comienza ejercicio 15, estás listo?");
+// let numero;
+// let promedio;
+// let contador=0;
+// let sumaNumeros;
+// numero=prompt("Ingresa un número: ");
+// validaNumero=isNaN(numero);
+// while(validaNumero==true){
+//     window.alert("El ingreso incorrecto");
+//     numero=prompt("Ingresa un número: ");
+// validaNumero=isNaN(numero);
+// }
+// numero=parseFloat(numero);
+// promedio=numero;
+// sumaNumeros=numero;
+// contador++;
+// while(promedio<20){
+//     numero=prompt("Ingresa un número: ");
+//     validaNumero=isNaN(numero);
+//     while(validaNumero==true){
+//         window.alert("El ingreso incorrecto");
+//         numero=prompt("Ingresa un número: ");
+//         validaNumero=isNaN(numero);
+//     }
+//     numero=parseFloat(numero);
+//     contador++;
+//     sumaNumeros+=numero;
+//     promedio=sumaNumeros/contador;
+// }
+// window.alert("Se ingresaron "+contador+" números");
+
+
+// window.alert("Comienza ejercicio 16, estás listo?");
+// let numero;
+// let totalPares=0;
+// let totalNumeros=0;
+// let porcentaje;
+// let respuesta="s"
+// while(respuesta=="s" || respuesta=="S"){
+//     numero=prompt("Ingresa un número entero:");
+//     validaNumero=isNaN(numero);
+//     while(validaNumero==true || !(parseInt(numero)==parseFloat(numero))){
+//         window.alert("El ingreso incorrecto");
+//         numero=prompt("Ingresa un número entero:");
+//         validaNumero=isNaN(numero);
+//     }
+//     numero=parseInt(numero);
+//     if(numero/2==parseInt(numero/2)){
+//         totalPares++;
+//     }
+//     totalNumeros++;
+//     numero=parseInt(numero);
+//     respuesta=prompt("Desea continuar? [S/N]");
+//     while(respuesta!="S" && respuesta!="N" && respuesta!="s" && respuesta!="n"){
+//         window.alert("Ingreso incorrecto, intente nuevamente.");
+//         respuesta=prompt("Desea continuar? [S/N]");
+//     }
+// }
+// porcentaje=(totalPares/totalNumeros)*100;
+// window.alert("El "+porcentaje+" de los númeeros es par");
+
+
+window.alert("Comienza ejercicio 17, estás listo?");
+let precioArticulo;
+let cantidad;
+let parcial;
+let totalTicket=0;
+let respuesta="s"
+while(respuesta=="s" || respuesta=="S"){
+    precioArticulo=prompt("Ingresa precio del artículo:");
+    validaNumero=isNaN(precioArticulo);
     while(validaNumero==true){
         window.alert("El ingreso incorrecto");
-        numero=prompt("Ingresa un número: ");
-        validaNumero=isNaN(numero);
+        precioArticulo=prompt("Ingresa precio del artículo:");
+        validaNumero=isNaN(precioArticulo);
     }
-    numero=parseFloat(numero);
-    contador++;
-    sumaNumeros+=numero;
-    promedio=sumaNumeros/contador;
+    precioArticulo=parseFloat(precioArticulo);
+    cantidad=prompt("ingresa la cantidad:");
+        validaNumero=isNaN(cantidad);
+        while(validaNumero==true || !(parseInt(cantidad)==parseFloat(cantidad))){
+            window.alert("El ingreso incorrecto");
+            cantidad=prompt("ingresa la cantidad:");
+            validaNumero=isNaN(cantidad);
+        }
+    cantidad=parseInt(cantidad);
+    parcial=precioArticulo*cantidad;
+    totalTicket+=parcial;
+    respuesta=prompt("Desea continuar? [S/N]");
+    while(respuesta!="S" && respuesta!="N" && respuesta!="s" && respuesta!="n"){
+        window.alert("Ingreso incorrecto, intente nuevamente.");
+        respuesta=prompt("Desea continuar? [S/N]");
+    }
 }
-window.alert("Se ingresaron "+contador+" números");
+window.alert("El total de la compra es: "+totalTicket+" pesos");
+
+
 
 
