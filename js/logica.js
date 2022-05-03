@@ -386,39 +386,112 @@
 // window.alert("El "+porcentaje+" de los númeeros es par");
 
 
-window.alert("Comienza ejercicio 17, estás listo?");
-let precioArticulo;
-let cantidad;
-let parcial;
-let totalTicket=0;
-let respuesta="s"
-while(respuesta=="s" || respuesta=="S"){
-    precioArticulo=prompt("Ingresa precio del artículo:");
-    validaNumero=isNaN(precioArticulo);
-    while(validaNumero==true){
-        window.alert("El ingreso incorrecto");
-        precioArticulo=prompt("Ingresa precio del artículo:");
-        validaNumero=isNaN(precioArticulo);
-    }
-    precioArticulo=parseFloat(precioArticulo);
-    cantidad=prompt("ingresa la cantidad:");
-        validaNumero=isNaN(cantidad);
-        while(validaNumero==true || !(parseInt(cantidad)==parseFloat(cantidad))){
-            window.alert("El ingreso incorrecto");
-            cantidad=prompt("ingresa la cantidad:");
-            validaNumero=isNaN(cantidad);
-        }
-    cantidad=parseInt(cantidad);
-    parcial=precioArticulo*cantidad;
-    totalTicket+=parcial;
-    respuesta=prompt("Desea continuar? [S/N]");
-    while(respuesta!="S" && respuesta!="N" && respuesta!="s" && respuesta!="n"){
-        window.alert("Ingreso incorrecto, intente nuevamente.");
-        respuesta=prompt("Desea continuar? [S/N]");
-    }
+// window.alert("Comienza ejercicio 17, estás listo?");
+// let precioArticulo;
+// let cantidad;
+// let parcial;
+// let totalTicket=0;
+// let respuesta="s"
+// while(respuesta=="s" || respuesta=="S"){
+//     precioArticulo=prompt("Ingresa precio del artículo:");
+//     validaNumero=isNaN(precioArticulo);
+//     while(validaNumero==true){
+//         window.alert("El ingreso incorrecto");
+//         precioArticulo=prompt("Ingresa precio del artículo:");
+//         validaNumero=isNaN(precioArticulo);
+//     }
+//     precioArticulo=parseFloat(precioArticulo);
+//     cantidad=prompt("ingresa la cantidad:");
+//         validaNumero=isNaN(cantidad);
+//         while(validaNumero==true || !(parseInt(cantidad)==parseFloat(cantidad))){
+//             window.alert("El ingreso incorrecto");
+//             cantidad=prompt("ingresa la cantidad:");
+//             validaNumero=isNaN(cantidad);
+//         }
+//     cantidad=parseInt(cantidad);
+//     parcial=precioArticulo*cantidad;
+//     totalTicket+=parcial;
+//     respuesta=prompt("Desea continuar? [S/N]");
+//     while(respuesta!="S" && respuesta!="N" && respuesta!="s" && respuesta!="n"){
+//         window.alert("Ingreso incorrecto, intente nuevamente.");
+//         respuesta=prompt("Desea continuar? [S/N]");
+//     }
+// }
+// window.alert("El total de la compra es: "+totalTicket+" pesos");
+
+
+// window.alert("Comienza ejercicio 18, estás listo?");
+// let sueldo=0;
+// let sueldoAnual=0;
+// contador=1;
+// while(sueldo>=0 && contador<=12){
+//     sueldo=prompt("Ingresa sueldo del mes "+contador);
+//     validaNumero=isNaN(sueldo);
+//     while(validaNumero==true){
+//         window.alert("El ingreso incorrecto");
+//         sueldo=prompt("Ingresa sueldo del mes "+x);
+//         sueldo=isNaN(sueldo);
+//     }
+//     sueldo=parseFloat(sueldo);
+//     sueldoAnual+=sueldo;
+//     contador++;
+// }
+// window.alert("El sueldo anual percibido es de $"+sueldoAnual)
+
+
+// window.alert("Comienza ejercicio 19, estás listo?");
+// let usuario="admin";
+// let contrasena="123456";
+// let usuarioIngresado;
+// let ContrasenaIngresada;
+// let intentos=0;
+// let sale=0;
+// while(!(intentos<3 && usuarioIngresado=="admin" && ContrasenaIngresada=="123456") && sale==0){
+//     usuarioIngresado=prompt("Ingrese usuario:");
+//     ContrasenaIngresada=prompt("Ingrese contraseña:");
+//     intentos++;
+//     console.log(intentos);
+//     sale=0;
+//     if(ContrasenaIngresada==contrasena && usuarioIngresado==usuario){
+//         window.alert("Acceso concedido");
+//         sale=1;
+//     }else{
+//         if(intentos==3){
+//             window.alert("Usuario bloqueado");
+//             sale=1;
+//         }else{
+//             window.alert("Usuario o contraseña incorrecta, intente nuevamente");
+//         }
+//     }
+// }
+// window.alert("terminó ejercicio");
+
+
+window.alert("Comienza ejercicio 21, estás listo?");
+let minutosIngresados;
+let segundosLimite;
+let minutos=0;
+let segundos=0;
+let segundosTotales;
+minutos=prompt("ingresa minutos:");
+validaNumero=isNaN(minutos);
+while(validaNumero==true || !(parseInt(minutos)==parseFloat(minutos))){
+    window.alert("El ingreso incorrecto");
+    minutos=prompt("ingresa minutos:");
+    validaNumero=isNaN(minutos);
 }
-window.alert("El total de la compra es: "+totalTicket+" pesos");
-
-
-
-
+minutos=parseInt(minutos);
+while((minutosIngresados*60)-1 < segundosTotales){
+    console.time();
+    for (let i = 0; i < 1000; i++) {
+        segundos++;
+        if(segundos==60){
+            minutos++;
+            segundos=0;
+        }
+        console.log("0"+minutos+":"+segundos);
+    }
+    console.timeEnd();
+        
+        
+}
