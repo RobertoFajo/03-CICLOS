@@ -7,26 +7,16 @@
 // }
 
 
+
+
+
+
+
 // window.alert("Comienza ejercicio 2, estás listo?");
 // let nroMenor;
 // let nroMayor;
-// let validaNumero;
-// nroMenor=prompt("Ingrese un número:");
-// validaNumero=isNaN(nroMenor);
-// while(validaNumero==true){
-//     window.alert("El ingreso no es un número");
-//     nroMenor=prompt("Ingrese un número:");
-//     validaNumero=isNaN(nroMenor);
-// }
-// nroMenor=parseInt(nroMenor);
-// nroMayor=prompt("Ingrese un número mayor que el anterior:");
-// validaNumero=isNaN(nroMayor);
-// while(validaNumero==true || parseInt(nroMayor) < nroMenor){
-//     window.alert("El ingreso incorrecto");
-//     nroMayor=prompt("Ingrese un número mayor que el anterior:");
-//     validaNumero=isNaN(nroMayor);
-// }
-// nroMayor=parseInt(nroMayor);
+// nroMenor=pideValidaNumeroEntero("Ingrese un número entero: ")
+// nroMayor=pideValidaNumeroEntero("Ingrese un número entero mayor que el anterior:");
 // console.log("METODO INCLUSIVO");
 // for(let x=nroMenor;x<=nroMayor;x++){
 //     console.log(x);
@@ -40,14 +30,7 @@
 // window.alert("Comienza ejercicio 3, estás listo?");
 // let n;
 // let validaNumero;
-// n=prompt("Ingrese un número entre 1 y 10:");
-// validaNumero=isNaN(n);
-// while(validaNumero==true || (parseInt(n)<1 || parseInt(n)>10)){
-//     window.alert("El ingreso incorrecto");
-//     n=prompt("Ingrese un número entre 1 y 10:");
-//     validaNumero=isNaN(n);
-// }
-// n=parseInt(n);
+// n=pideValidaNumeroEnteroEntre("Ingresa un número entero entre 1 y 10: ",1,10);
 // for(let x=1;x<=10;x++){
 //     console.log(n+" x "+x+" = "+(n*x));
 // }
@@ -55,15 +38,7 @@
 
 // window.alert("Comienza ejercicio 4, estás listo?");
 // let n;
-// let validaNumero;
-// n=prompt("Ingrese un número:");
-// validaNumero=isNaN(n);
-// while(validaNumero==true){
-//     window.alert("El ingreso incorrecto");
-//     n=prompt("Ingrese un número:");
-//     validaNumero=isNaN(n);
-// }
-// n=parseInt(n);
+// n=pideValidaNumeroEntero("Ingrese un número entero: ");
 // for(let x=1;x<=n;x++){
 //     if(!((3*x)/5==parseInt((3*x)/5))){
 //         console.log(3+" x "+x+" = "+(3*x));
@@ -71,24 +46,17 @@
 // }
     
 
-// window.alert("Comienza ejercicio 5, estás listo?");
-// let n;
-// let contador=0;
-// let validaNumero;
-// for(let x=1;x<=5;x++){
-//     n=prompt("Ingrese edad "+x);
-//     validaNumero=isNaN(n);
-//     while(validaNumero==true){
-//         window.alert("El ingreso incorrecto");
-//         n=prompt("Ingrese un número:");
-//         validaNumero=isNaN(n);
-//     }
-//     n=parseInt(n);
-//     if(!((n/2)==parseInt(n/2)) && (n>18)){
-//         contador++;
-//     }
-// }
-// window.alert("Hubo "+contador+" edades impares mayores a 18");
+window.alert("Comienza ejercicio 5, estás listo?");
+let n;
+let contador=0;
+let validaNumero;
+for(let x=1;x<=5;x++){
+    n=pideValidaNumeroEntero("Ingrese edad: ");
+    if(n%2>0 && n>18){
+        contador++;
+    }
+}
+window.alert("Hubo "+contador+" edades impares mayores a 18");
 
 
 // window.alert("Comienza ejercicio 6, estás listo?");
@@ -467,31 +435,4 @@
 // window.alert("terminó ejercicio");
 
 
-window.alert("Comienza ejercicio 21, estás listo?");
-let minutosIngresados;
-let segundosLimite;
-let minutos=0;
-let segundos=0;
-let segundosTotales;
-minutos=prompt("ingresa minutos:");
-validaNumero=isNaN(minutos);
-while(validaNumero==true || !(parseInt(minutos)==parseFloat(minutos))){
-    window.alert("El ingreso incorrecto");
-    minutos=prompt("ingresa minutos:");
-    validaNumero=isNaN(minutos);
-}
-minutos=parseInt(minutos);
-while((minutosIngresados*60)-1 < segundosTotales){
-    console.time();
-    for (let i = 0; i < 1000; i++) {
-        segundos++;
-        if(segundos==60){
-            minutos++;
-            segundos=0;
-        }
-        console.log("0"+minutos+":"+segundos);
-    }
-    console.timeEnd();
-        
-        
-}
+
